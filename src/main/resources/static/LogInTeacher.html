@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="style-login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h1><img src="image/thmtham.PNG" style="width:250px;height:67px;"></h1>
+    <div class="wrapper">
+        <form onsubmit="login(event)">
+            <form action="home_prof.html" method="post">
+
+
+                <!--logo thammasat-->
+
+
+                <h2><label for="fname">Login</label><br></h2>
+
+                <div class="dropdown">
+                    <button id="myBtn" class="dropbtn">คุณไม่ใช่อาจารย์ที่ปรึกษา?</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="LogIn.html">นักศึกษา</a>
+                        <a href="LogInTeacher.html">อาจารย์ที่ปรึกษา</a>
+                        <a href="LogInStaff.html">เจ้าหน้าที่</a>
+                    </div>
+                </div>
+
+                <script>
+                    // Get the button, and when the user clicks on it, execute myFunction
+                    document.getElementById("myBtn").onclick = function () { myFunction() };
+
+                    /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+                    function myFunction() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                </script>
+
+                <!-- username/ password/ login button-->
+
+                <div class="input-box">
+                    <input type="phone" placeholder="username" id="username" pattern="[0-9]{10}" required>
+                </div>
+
+
+                <div class="input-box">
+                    <input type="password" class="form-control" id="password" placeholder="password" pattern="[0-9]{13}"
+                        required>
+
+                </div>
+
+                <!-- id from login -->
+                <div class="from-check">
+                    <label class="form-check-label" for="flexCheckDefault">Remember me</label>
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault">
+
+                </div>
+                <div>
+                    <a href="home_prof.html">
+                        <button types="submit" class="button" onclick="auth()"><img src="image/9622937.png"
+                                style="width:24px;height:22px;"></button>
+                    </a>
+                </div>
+            </form>
+        </form>
+    </div>
+    <script src="scriptLoginProf.js"></script>
+</body>
+
+</html>

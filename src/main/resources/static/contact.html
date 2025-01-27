@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles-contact.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <title>mainpage</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <div class="head">
+                <div class="tu-logo">
+                    <img src="image/logo.jpg" alt="">
+                </div>
+                <div class="user">
+                    <div class="user-detail">
+                        <p class="name">นักศึกษา</p>
+
+                    </div>
+                    <div class="user-img">
+                        <img src="image/profile-user.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main clearfix">
+            <div class="sidebar"> <!--sidebar-->
+                <div class="nav">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="mainpage2.html">
+                                    <i class="icon ph-bold ph-house-simple"></i>
+                                    <span class="text">หน้าหลัก</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about.html">
+                                    <i class="icon ph-bold ph-tag"></i>
+                                    <span class="text">เกี่ยวกับ</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="contact.html">
+                                    <i class="icon ph-bold ph-chat-circle"></i>
+                                    <span class="text">ติดต่อเรา</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-file-plus"></i>
+                                    <span class="text">ขอยื่นคำร้อง</span>
+                                    <i class="arrow ph-bold ph-caret-down"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="form1.html">
+                                            <span class="text">จดทะเบียนล่าช้า/เพิ่มล่าช้า</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form2.html">
+                                            <span class="text">ขอเพิ่ม/ถอนรายวิชา (drop w)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form3.html">
+                                            <span class="text">ขอจดทะเบียนศึกษารายวิชาข้ามโครงการ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form4.html">
+                                            <span class="text">ขอลาออก</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form5.html">
+                                            <span class="text">อื่น ๆ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-file-dashed"></i>
+                                    <span class="text">ยกเลิกคำร้อง</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-bell-ringing"></i>
+                                    <span class="text">ติดตามผลคำร้อง</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-money"></i>
+                                    <span class="text">รายการชำระเงิน</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="logout">
+                            <a href="LogIn.html">
+                                <i class="icon ph-bold ph-sign-out"></i>
+                                <span class="text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="body">
+                    <div class="contact">
+                        <table class="campus">
+                            <tr>
+                                <th>ท่าพระจันทร์</th>
+                                <th>ศูนย์รังสิต</th>
+                            </tr>
+                            <tr>
+                                <td>2 ถนนพระจันทร์ แขวงพระบรมมหาราชวัง, เขตพระนคร, กรุงเทพฯ 10200 <br>
+                                    Tel. +66 (0) 2613 3333, 0-2221-6171-80, 0-2221-6111-20 <br>
+                                    แผนที่ <i class="icon ph ph-map-trifold" id="maptpj"></i>
+                                </td>
+                                <td>99 หมู่ 18, ถ.พหลโยธิน, ต.คลองหนึ่ง, อ.คลองหลวง, จ.ปทุมธานี, 12120<br>
+                                    Tel. +66 (0) 2564 4451-79<br>
+                                    แผนที่ <i class="icon ph ph-map-trifold" id="maprs"></i>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <table class="campus">
+                            <tr>
+                                <th>ศูนย์พัทยา</th>
+                                <th>ศูนย์ลำปาง</th>
+                            </tr>
+                            <tr>
+                                <td>อาคารบรรยายรวม เลขที่ 39/4 หมู่ 5 ต.โป่ง อ.บางละมุง จ.ชลบุรี 20150<br>
+                                    Tel. +66 (0) 3825 9050-55<br>
+                                    แผนที่ <i class="icon ph ph-map-trifold" id="mappty"></i>
+                                </td>
+                                <td>248 หมู่ 2 ถ.ลำปาง-เชียงใหม่ ต.ปงยางคก อ.ห้างฉัตร จ.ลำปาง 52190<br>
+                                    Tel. +66 (0) 5423-7999 <br>
+                                    Fax. +66 (0) 5423 7999 ต่อ 5119<br>
+                                    แผนที่ <i class="icon ph ph-map-trifold" id="maplp"></i>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <h3 class="hello">ช่องทางติดต่อ</h3>
+                        <i class="icon ph ph-facebook-logo" id="facebook"></i>
+                        <i class="icon ph ph-youtube-logo" id="youtube"></i>
+                        <i class="icon ph ph-twitter-logo" id="twitter"></i>
+                        <i class="icon ph ph-instagram-logo" id="instagram"></i>
+
+                    </div>
+
+                    <div class="address">
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="script-contact.js"></script>
+</body>
+
+</html>

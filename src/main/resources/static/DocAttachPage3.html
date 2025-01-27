@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles-DocAttachPage.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <!-- ICONS File-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+    <title>Document Attachment Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <div class="head">
+                <div class="tu-logo">
+                    <img src="image/logo.jpg" alt="">
+                </div>
+                <div class="user">
+                    <div class="user-detail">
+                        <p class="name">นักศึกษา</p>
+
+                    </div>
+                    <div class="user-img">
+                        <img src="image/profile-user.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main clearfix">
+            <div class="sidebar"> <!--sidebar-->
+                <div class="nav">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="mainpage2.html">
+                                    <i class="icon ph-bold ph-house-simple"></i>
+                                    <span class="text">หน้าหลัก</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about.html">
+                                    <i class="icon ph-bold ph-tag"></i>
+                                    <span class="text">เกี่ยวกับ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html">
+                                    <i class="icon ph-bold ph-chat-circle"></i>
+                                    <span class="text">ติดต่อเรา</span>
+                                </a>
+                            </li>
+
+                            <li class="active">
+                                <a href="#">
+                                    <i class="icon ph-bold ph-file-plus"></i>
+                                    <span class="text">ขอยื่นคำร้อง</span>
+                                    <i class="arrow ph-bold ph-caret-down"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="form1.html">
+                                            <span class="text">จดทะเบียนล่าช้า/เพิ่มล่าช้า</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form2.html">
+                                            <span class="text">ขอเพิ่ม/ถอนรายวิชา (drop w)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form3.html">
+                                            <span class="text">ขอจดทะเบียนศึกษารายวิชาข้ามโครงการ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form4.html">
+                                            <span class="text">ขอลาออก</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form5.html">
+                                            <span class="text">อื่น ๆ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-file-dashed"></i>
+                                    <span class="text">ยกเลิกคำร้อง</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-bell-ringing"></i>
+                                    <span class="text">ติดตามผลคำร้อง</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-money"></i>
+                                    <span class="text">รายการชำระเงิน</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="logout">
+                            <a href="LogIn.html">
+                                <i class="icon ph-bold ph-sign-out"></i>
+                                <span class="text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="body">
+                    <div class="filelogo">
+                        <img src="image/folder.png" alt="" width="250" height="250">
+                    </div>
+                </div>
+                <div class="filebox">
+                    <input type="file" id="file-input" multiple />
+                    <label for="file-input">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        &nbsp; Choose Files To Upload
+                    </label>
+
+                    <div class="note">
+                        <p>*รองรับไฟล์ .jpg หรือ .pdf ขนาดไฟล์ไม่เกิน 100KB จำนวนไม่เกิน 5 ไฟล์ </p>
+                    </div>
+
+
+                    <div id="num-of-files">No Files Chosen</div>
+                    <ul id="files-list"></ul>
+                </div>
+
+                <div class="buttons">
+                    <a href="form3.html">
+                        <button id="backButton">BACK</button>
+                    </a>
+                    <button id="submitButton" onclick="openComplete()">SUBMIT</button>
+                </div>
+
+                <div class="complete" id="complete">
+                    <img src="image/checked.png" alt="">
+                    <h2>Complete</h2>
+                    <p>คำร้องขอสำเร็จ</p>
+                    <button type="button" id="okButton" onclick="closeComplete()">OK</button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

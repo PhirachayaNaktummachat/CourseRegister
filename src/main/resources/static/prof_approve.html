@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles-prof_approve.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <title>mainpage</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <div class="head">
+                <div class="tu-logo">
+                    <img src="image/logo.jpg" alt="">
+                </div>
+                <div class="user">
+                    <div class="user-detail">
+                        <p class="name">อาจารย์ที่ปรึกษา</p>
+
+                    </div>
+                    <div class="user-img">
+                        <img src="image/profile-user.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main clearfix">
+            <div class="sidebar"> <!--sidebar-->
+                <div class="nav">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="home_prof.html">
+                                    <i class="icon ph-bold ph-house-simple"></i>
+                                    <span class="text">หน้าหลัก</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="prof_approve.html">
+                                    <i class="icon ph-bold ph-hourglass-medium"></i>
+                                    <span class="text">รออนุมัติ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-note"></i>
+                                    <span class="text">บันทึกคำร้อง</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="logout">
+                            <a href="LogInTeacher.html">
+                                <i class="icon ph-bold ph-sign-out"></i>
+                                <span class="text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="body">
+                    <div class="wait_approve">
+                        <table class="wait">
+                            <tr>
+                                <th>ลำดับ</th>
+                                <th>วันที่/เวลา</th>
+                                <th>คำร้อง</th>
+                                <th>ชื่อ-นามสกุล</th>
+                                <th>อนุมัติ/ไม่อนุมัติ</th>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>10/11/66 12:40</td>
+                                <td>จดทะเบียน <a
+                                        href="https://sites.google.com/dome.tu.ac.th/group5-section650001/home">
+                                        <i class="icon ph-bold ph-folder-open"></i></a></td>
+                                <td>นางสาวขวัญดาว ขันบุรี</td>
+                                <td><select id="accept" name="accept">
+                                        <option value="accept">อนุมัติ</option>
+                                        <option value="noaccept">ไม่อนุมัติ</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>12/11/66 11:34</td>
+                                <td>ถอนรายวิชา <a
+                                        href="https://sites.google.com/dome.tu.ac.th/group5-section650001/home">
+                                        <i class="icon ph-bold ph-folder-open"></i></a></td>
+                                <td>นางสาวอธิชา สุดสวนศรี</td>
+                                <td><select id="accept" name="accept">
+                                        <option value="accept">อนุมัติ</option>
+                                        <option value="noaccept">ไม่อนุมัติ</option>
+                                    </select></td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>12/11/66 14:10</td>
+                                <td>เพิ่มรายวิชา <a
+                                        href="https://sites.google.com/dome.tu.ac.th/group5-section650001/home">
+                                        <i class="icon ph-bold ph-folder-open"></i></a></td>
+                                <td>นางสาวจิราพร เกษมสุข</td>
+                                <td><select id="accept" name="accept">
+                                        <option value="accept">อนุมัติ</option>
+                                        <option value="noaccept">ไม่อนุมัติ</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                        </table>
+
+                        <div class="sent">
+                            <input type="submit" value="SENT" id="submitButton" onclick="openComplete()">
+                        </div>
+
+                        <div class="complete" id="complete">
+                            <img src="image/checked.png" alt="">
+                            <h2>Complete</h2>
+                            <p>สำเร็จ</p>
+                            <button type="button" id="okButton" onclick="closeComplete()">OK</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous"></script>
+
+    <script src="script-approve.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ICONS -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles-form.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    <title>แบบฟอร์มขอลาออก</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <div class="head">
+                <div class="tu-logo">
+                    <img src="image/logo.jpg" alt="">
+                </div>
+                <div class="user">
+                    <div class="user-detail">
+                        <p class="name">นักศึกษา</p>
+
+                    </div>
+                    <div class="user-img">
+                        <img src="image/profile-user.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main clearfix">
+            <div class="sidebar"> <!--sidebar-->
+                <div class="nav">
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="mainpage2.html">
+                                    <i class="icon ph-bold ph-house-simple"></i>
+                                    <span class="text">หน้าหลัก</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="about.html">
+                                    <i class="icon ph-bold ph-tag"></i>
+                                    <span class="text">เกี่ยวกับ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.html">
+                                    <i class="icon ph-bold ph-chat-circle"></i>
+                                    <span class="text">ติดต่อเรา</span>
+                                </a>
+                            </li>
+
+                            <li class="active">
+                                <a href="#">
+                                    <i class="icon ph-bold ph-file-plus"></i>
+                                    <span class="text">ขอยื่นคำร้อง</span>
+                                    <i class="arrow ph-bold ph-caret-down"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="form1.html">
+                                            <span class="text">จดทะเบียนล่าช้า/เพิ่มล่าช้า</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form2.html">
+                                            <span class="text">ขอเพิ่ม/ถอนรายวิชา (drop w)</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form3.html">
+                                            <span class="text">ขอจดทะเบียนศึกษารายวิชาข้ามโครงการ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form4.html">
+                                            <span class="text">ขอลาออก</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="form5.html">
+                                            <span class="text">อื่น ๆ</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-file-dashed"></i>
+                                    <span class="text">ยกเลิกคำร้อง</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-bell-ringing"></i>
+                                    <span class="text">ติดตามผลคำร้อง</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-money"></i>
+                                    <span class="text">รายการชำระเงิน</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li class="logout">
+                            <a href="LogIn.html">
+                                <i class="icon ph-bold ph-sign-out"></i>
+                                <span class="text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="body">
+                    <div class="form-group">
+                        <h1 class="h1">แบบฟอร์มขอลาออก</h1>
+                        <h2 class="required" class="h2">วันเดือนปีที่กรอก</h2>
+                        <div class="form-row">
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                        <h2 class="required" class="h2"> ข้อมูลส่วนตัว</h2>
+                        <div class="form-row">
+                            <label for="title">ข้าพเจ้า</label>
+                            <select id="title" name="title">
+                                <option value="ex">คำนำหน้า</option>
+                                <option value="mr">นาย</option>
+                                <option value="ms">นาง</option>
+                                <option value="mss">นางสาว</option>
+                            </select>
+                            <input type="text" name="name" id="name" placeholder="ชื่อ - นามสกุล">
+                            <label for="studentId">เลขทะเบียนนักศึกษา</label>
+                            <input type="number" name="studentId" id="studentId"
+                                placeholder="เลขทะเบียนนักศึกษา 10 หลัก">
+                        </div>
+                        <div class="form-row">
+                            <label for="studentYear">ชั้นปีที่</label>
+                            <select id="studentYear" name="studentYear">
+                                <option value="ex">ชั้นปี</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+
+                            </select>
+                            <label for="studyField">สาขาวิชา</label>
+                            <select id="sec" name="studyField">
+                                <option value="">สาขาวิชา</option>
+                                <option>ฟิสิกส์</option>
+                                <option>ฟิสิกส์อิเลกทรอนิกส์</option>
+                                <option>คณิตศาสตร์</option>
+                                <option>คณิตศาสตร์ประยุกต์</option>
+                                <option>คณิตศาสตร์การจัดการ (ตรีควบโท)</option>
+                                <option>เคมี</option>
+                                <option>เทคโนโลยีชีวภาพ</option>
+                                <option>เทคโนโลยีการเกษตร</option>
+                                <option>เทคโนโลยีพลังงานชีวภาพและการแปรรูปเคมีชีวภาพ</option>
+                                <option>เทคโนโลยีเพื่อการพัฒนายั่งยืน</option>
+                                <option>เทคโนโลยีดิจิทัลแนวสร้างสรรค์ (หลักสูตรนานาชาติ)</option>
+                                <option>วิทยาศาสตร์และนวัตกรรมทางอาหาร</option>
+                                <option>วิทยาศาสตร์และเทคโนโลยีการอาหาร</option>
+                                <option>วิทยาศาสตร์และเทคโนโลยีสิ่งทอ</option>
+                                <option>สถิติ</option>
+                                <option>การออกแบบเชิงนวัตกรรมดิจิทัล (หลักสูตรนานาชาติ)</option>
+                                <option>วัสดุศาสตร์</option>
+                                <option>วิทยาการคอมพิวเตอร์</option>
+                                <option>วิทยาศาสตร์อุตสาหการและการจัดการ (หลักสูตรนานาชาติ)</option>
+                                <option>วิทยาการประกันภัย</option>
+                            </select>
+                            <br>
+                            <label for="advisor">อาจารย์ที่ปรึกษา</label>
+                            <input type="text" name="advisor" id="advisor" placeholder="ชื่ออาจารย์ที่ปรึกษา">
+                        </div>
+                        <h2 class="required" class="h2">ที่อยู่</h2>
+                        <div class="form-row">
+                            <label for="addressNumber">บ้านเลขที่</label>
+                            <input type="text" name="addressNumber" id="addressNumber" placeholder="XXX/XXX">
+                            <label for="moo">หมู่</label>
+                            <input type="text" name="moo" id="moo">
+                            <label for="tumbol">เขต/ตำบล</label>
+                            <input type="text" name="tumbol" id="tumbol">
+                        </div>
+                        <div class="form-row">
+                            <label for="amphur">อำเภอ</label>
+                            <input type="text" name="amphur" id="amphur">
+                            <label for="province">จังหวัด</label>
+                            <input type="text" name="province" id="province">
+                            <br>
+                            <label for="postalCode">รหัสไปรษณีย์</label>
+                            <input type="text" name="postalCode" id="postalCode" placeholder="XXXXX" maxlength="5"
+                                pattern="[0-9]{5}">
+                        </div>
+                        <h2 class="required" class="h2">ติดต่อ</h2>
+                        <div class="form-row">
+                            <label for="mobilePhone">โทรศัพท์ติดต่อนักศึกษา</label>
+                            <input type="text" name="mobilePhone" id="mobilePhone" placeholder="xxx-xxx-xxxx"
+                                maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                            <label for="email">อีเมล</label>
+                            <input type="email" name="phonemom" id="phonemom"
+                                placeholder="email @dome.tu.ac.th เท่านั้น">
+                        </div>
+                        <div class="form-row">
+                            <label for="phonemom">โทรศัพท์ติดต่อผู้ปกครอง</label>
+                            <input type="text" name="phonemom" id="phonemom" placeholder="xxx-xxx-xxxx" maxlength="12"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        </div>
+                        <h2 class="required" class="h2">ประสงค์ที่จะยื่นคำร้อง</h2>
+                        <div class="form-row">
+                            <label for="byebye">ขอลาออก ภาคการศึกษาที่</label>
+                            <select id="park" name="park">
+                                <option value="ex">ภาคเรียน</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                            <label for="tub">/</label>
+                            <select id="year" name="year">
+                                <option value="first">ปีการศึกษา</option>
+                                <option value="60">60</option>
+                                <option value="61">61</option>
+                                <option value="62">62</option>
+                                <option value="63">63</option>
+                                <option value="64">64</option>
+                                <option value="65">65</option>
+                                <option value="66">66</option>
+                            </select>
+                        </div>
+                        <h2 class="required" class="h2">เหตุผลที่ยื่นคำร้อง</h2>
+                        <textarea id="Reason" name="Reason" rows="4" cols="50" required style="margin-bottom: 50px;"
+                            class="form-control"></textarea>
+                        <div class="submitform">
+                            <input type="checkbox" class="submitformin" id="resignnight" name="f4" value="form4">
+                            <label for="f4">ยืนยันการส่งแบบฟอร์มขอลาออก</label><br>
+                        </div>
+                        <div class="form-button">
+                            <a href="DocAttachPage4.html">
+                                <button type="submit">Next</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+        integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="script-form.js"></script>
+</body>
+
+</html>
